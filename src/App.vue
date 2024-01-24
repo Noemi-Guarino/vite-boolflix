@@ -20,7 +20,7 @@ export default {
     methods: {
 
     },
-      created() {
+      mounted() {
           axios
              .get(this.store.Urlmovie,{
               params:{
@@ -29,8 +29,6 @@ export default {
               }
              })
              .then((response) => {
-                 // console.log(response.data);
-                 // this.cards.push(response.data);
                  console.log('movie',response);
              });
           axios
@@ -41,12 +39,10 @@ export default {
             }
            })
            .then((response) => {
-               // console.log(response.data);
-               // this.cards.push(response.data);
                console.log('serietv',response);
            });
-           }
-   }
+      }
+  }
           
 </script>
 
