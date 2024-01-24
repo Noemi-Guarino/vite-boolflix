@@ -1,15 +1,12 @@
 <script>
-import axios from 'axios';
 import { store } from '../store';
+import axios from 'axios';
 
 export default {
     data() {
         return {
           store,
         };
-    },
-    props:{
-
     },
     methods: {
 
@@ -18,23 +15,30 @@ export default {
 </script>
 
 <template>
+
   <div>
-    <main>
+    <div>
+      <div v-for="(movie,index) in store.movies" key="index">        
+        <h3 >
+          {{ movie.title }}
+        </h3>
         <div>
-          <div>
-            <div>
-              <div>
-                <img src="" alt="">
-              </div>
-              <div>
-                <h3 v-for="(movie,index) in movies">
-                  {{ movie.title }}
-                </h3>
-              </div>
-            </div>
-          </div>
+          <h4 >
+            {{ movie.original_title }}
+          </h4>
         </div>
-    </main>
+        <div>
+          <h5>
+            {{ movie.original_language }}
+          </h5>
+        </div>
+        <div>
+          <h6>
+            {{ movie.vote_average }}
+          </h6>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 

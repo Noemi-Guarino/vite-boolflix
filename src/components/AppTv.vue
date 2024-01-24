@@ -16,9 +16,7 @@ export default {
 
 <template>
   <div>
-    <main>
-        MAIN
-    </main>
+    
   </div>
 </template>
 

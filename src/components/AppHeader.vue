@@ -18,8 +18,8 @@ export default {
               }
              })
              .then((response) => {
-                this.movies = response.data.results;
-                console.log("questafilm",this.movies);
+                this.store.movies = response.data.results;
+                console.log("questafilm",this.store.movies);
              });
           axios
            .get(this.store.Urlserie,{
@@ -29,8 +29,8 @@ export default {
             }
            })
            .then((response) => {
-            this.series = response.data.results;
-            console.log("questaserie",this.series);
+            this.store.series = response.data.results;
+            console.log("questaserie",this.store.series);
                
            });
            
@@ -70,7 +70,7 @@ export default {
 
 <style lang="scss" scoped>
 .bg_header{
-  background-color: black;
+  // background-color: black;
   height: 100px;
   border:2px solid red;
 }

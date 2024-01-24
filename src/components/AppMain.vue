@@ -7,7 +7,7 @@ import AppTv from './AppTv.vue';
 export default {
     data() {
         return {
-
+          store,
         };
     },
     methods: {
