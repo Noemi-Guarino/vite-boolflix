@@ -20,7 +20,7 @@ export default {
     methods: {
 
     },
-      mounted() {
+      // mounted() {
           // axios
           //    .get(this.store.Urlmovie,{
           //     params:{
@@ -42,7 +42,7 @@ export default {
           //      console.log('serietv',response);
           //  });
            
-      }
+      // }
   }
           
 </script>

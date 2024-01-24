@@ -22,9 +22,9 @@ export default {
 
 <template>
   <div>
-    <main>
-        MAIN
-    </main>
+    <AppMovie/>
+    <AppTv/>
+
   </div>
 </template>
 

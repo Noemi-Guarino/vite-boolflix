@@ -35,7 +35,7 @@ export default {
            });
            
 
-      } 
+        } 
       }
     } 
     
@@ -50,17 +50,17 @@ export default {
         <div class="bg_header">
           <div class="container">
             <div class="header_container">
-                <div>
-                  <h1>
-                    Boolfix
-                  </h1>
-                </div>
-                <div>
-                  <input v-model="store.search" type="text" >
-                  <button type="button" @click="searchbutton">
-                    Cerca
-                  </button>
-                </div>
+              <div>
+                <h1>
+                  Boolfix
+                </h1>
+              </div>
+              <div>
+                <input v-model="store.search" type="text" >
+                <button type="button" @click="searchbutton">
+                  Cerca
+                </button>
+              </div>
             </div>
           </div>
         </div>
