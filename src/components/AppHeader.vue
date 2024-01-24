@@ -1,14 +1,45 @@
 <script>
+import axios from 'axios';
+import { store } from '../store';
+
 export default {
     data() {
         return {
-          
+          store,
         };
     },
     methods: {
 
+    },
+    searchbutton(){
+      axios
+             .get(this.store.Urlmovie,{
+              params:{
+                api_key:this.store.apiKey,
+                query: this.store.search,
+              }
+             })
+             .then((response) => {
+                this.movies = response.data.results;
+                console.log(this.movies);
+             });
+          axios
+           .get(this.store.Urlserie,{
+            params:{
+              api_key:this.store.apiKey,
+              query:this.store.search,
+            }
+           })
+           .then((response) => {
+            this.series = response.data.results;
+            console.log(this.series);
+               
+           });
+           
+      }
+
     }
-}
+
 </script>
 
 <template>
@@ -23,12 +54,10 @@ export default {
                   </h1>
                 </div>
                 <div>
-                  <form action="" @submit.prevent="searchMovie">
-                    <input type="text">
-                    <button>
-                      Cerca
-                    </button>
-                  </form>
+                  <input v-model="store.search" type="text" >
+                  <button type="button" @click="searchbutton">
+                    Cerca
+                  </button>
                 </div>
             </div>
           </div>
@@ -48,5 +77,9 @@ export default {
   display: flex;
   justify-content: space-between;
   padding: 20px;
+}
+
+h1{
+  color: red;
 }
 </style>

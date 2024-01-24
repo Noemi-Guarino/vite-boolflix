@@ -25,7 +25,7 @@ export default {
              .get(this.store.Urlmovie,{
               params:{
                 api_key:this.store.apiKey,
-                query:'rick',
+                query: '',
               }
              })
              .then((response) => {
@@ -35,12 +35,13 @@ export default {
            .get(this.store.Urlserie,{
             params:{
               api_key:this.store.apiKey,
-              query:'rick',
+              query:'',
             }
            })
            .then((response) => {
                console.log('serietv',response);
            });
+           
       }
   }
           
