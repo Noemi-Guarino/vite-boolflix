@@ -24,13 +24,18 @@ export default {
       return this.flags.includes(lang);
     },
     changeimgflag(lang){
-      if(lang=='it'){
-        return itimg;
-      }else if(lang=='en'){
-        return enimg;
+      if(lang=='en'){
+        return 'GB';
       }else{
-        return ''
+        return lang.toUpperCase();
       }
+      // if(lang=='it'){
+      //   return itimg;
+      // }else if(lang=='en'){
+      //   return enimg;
+      // }else{
+      //   return ''
+      // }
     }
 
     }
@@ -53,8 +58,9 @@ export default {
               {{ movie.original_title }}
             </h4>
             <div>
-               <img v-if="flagExist(movie.original_language)" :src="changeimgflag(movie.original_language)" alt="">
-               <span v-else>{{ movie.original_language }}</span>
+              <img :src="`https://flagsapi.com/${changeimgflag(movie.original_language)}/flat/64.png`">
+              <!-- <img v-if="flagExist(movie.original_language)" :src="changeimgflag(movie.original_language)" alt=""> -->
+               <span>{{ movie.original_language }}</span>
             </div>
             <h5>
               {{ movie.vote_average }}

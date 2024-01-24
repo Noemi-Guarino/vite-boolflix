@@ -31,10 +31,7 @@ export default {
            .then((response) => {
             this.store.series = response.data.results;
             console.log("questaserie",this.store.series);
-               
            });
-           
-
         } 
       }
     } 
