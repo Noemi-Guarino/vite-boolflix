@@ -22,12 +22,12 @@ export default {
         <div class="card" v-for="(serie,index) in store.series" key="index"> 
           <div>
             <h3 >
-              {{ serie.title }}
+              {{ serie.name }}
             </h3>
           </div>   
           <div class="infomain">
             <h4 >
-              {{ serie.original_title }}
+              {{ serie.original_name }}
             </h4>
             <h4>
               {{ serie.original_language }}
