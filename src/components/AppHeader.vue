@@ -9,9 +9,7 @@ export default {
         };
     },
     methods: {
-
-    },
-    searchbutton(){
+      searchbutton(){
       axios
              .get(this.store.Urlmovie,{
               params:{
@@ -21,7 +19,7 @@ export default {
              })
              .then((response) => {
                 this.movies = response.data.results;
-                console.log(this.movies);
+                console.log("questafilm",this.movies);
              });
           axios
            .get(this.store.Urlserie,{
@@ -32,13 +30,17 @@ export default {
            })
            .then((response) => {
             this.series = response.data.results;
-            console.log(this.series);
+            console.log("questaserie",this.series);
                
            });
            
-      }
 
-    }
+      } 
+      }
+    } 
+    
+
+
 
 </script>
 
