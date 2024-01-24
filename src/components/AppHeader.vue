@@ -56,7 +56,7 @@ export default {
                 </h1>
               </div>
               <div>
-                <input v-model="store.search" type="text" >
+                <input v-model="store.search" @keyup.enter="searchbutton" type="text" >
                 <button type="button" @click="searchbutton">
                   Cerca
                 </button>
@@ -70,7 +70,7 @@ export default {
 
 <style lang="scss" scoped>
 .bg_header{
-  // background-color: black;
+  background-color: black;
   height: 100px;
   border:2px solid red;
 }
