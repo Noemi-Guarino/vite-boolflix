@@ -1,8 +1,8 @@
 <script>
 import { store } from '../store';
 import axios from 'axios';
-import itimg from '../img/it.png'
-import enimg from '../img/en.png'
+// import itimg from '../img/it.png'
+// import enimg from '../img/en.png'
 
 
 export default {
@@ -26,6 +26,8 @@ export default {
     changeimgflag(lang){
       if(lang=='en'){
         return 'GB';
+      }else if(lang=='ja'){
+        return 'JP';
       }else{
         return lang.toUpperCase();
       }
