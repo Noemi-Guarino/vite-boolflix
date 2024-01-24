@@ -20,17 +20,21 @@ export default {
     methods: {
 
     },
-    // created() {
-    //     axios
-    //         .get(this.store.myurl)
-    //         .then((response) => {
-    //             // console.log(response.data);
-    //             // this.cards.push(response.data);
-    //             this.store.cards = response.data.data;
-    //             console.log(this.store.cards);
-    //         });
-    //       }
-}
+     created() {
+         axios
+             .get(this.store.Urlmovie,{
+              params:{
+                api_key:this.store.apiKey,
+                query:'rick',
+              }
+             })
+             .then((response) => {
+                 // console.log(response.data);
+                 // this.cards.push(response.data);
+                 console.log(response);
+             });
+           }
+          }
 </script>
 
 <template>

@@ -17,12 +17,19 @@ export default {
         <div class="bg_header">
           <div class="container">
             <div class="header_container">
-              <form action="">
-                <input type="text">
-                <button>
-                  Cerca
-                </button>
-              </form>
+                <div>
+                  <h1>
+                    Boolfix
+                  </h1>
+                </div>
+                <div>
+                  <form action="" @submit.prevent="searchMovie">
+                    <input type="text">
+                    <button>
+                      Cerca
+                    </button>
+                  </form>
+                </div>
             </div>
           </div>
         </div>
@@ -35,5 +42,11 @@ export default {
   background-color: black;
   height: 100px;
   border:2px solid red;
+}
+
+.header_container{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
 }
 </style>
