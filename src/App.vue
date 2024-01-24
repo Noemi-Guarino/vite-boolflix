@@ -20,8 +20,8 @@ export default {
     methods: {
 
     },
-     created() {
-         axios
+      created() {
+          axios
              .get(this.store.Urlmovie,{
               params:{
                 api_key:this.store.apiKey,
@@ -31,10 +31,23 @@ export default {
              .then((response) => {
                  // console.log(response.data);
                  // this.cards.push(response.data);
-                 console.log(response);
+                 console.log('movie',response);
              });
+          axios
+           .get(this.store.Urlserie,{
+            params:{
+              api_key:this.store.apiKey,
+              query:'rick',
+            }
+           })
+           .then((response) => {
+               // console.log(response.data);
+               // this.cards.push(response.data);
+               console.log('serietv',response);
+           });
            }
-          }
+   }
+          
 </script>
 
 <template>
