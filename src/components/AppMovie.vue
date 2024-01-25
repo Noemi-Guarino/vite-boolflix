@@ -40,7 +40,7 @@ export default {
       // }
     },
     Movieimg(img){
-      let linkImg = 'http://image.tmdb.org/t/p/w500/';
+      let linkImg = 'http://image.tmdb.org/t/p/w342/';
       linkImg += img;
       return linkImg;
     }
@@ -57,7 +57,7 @@ export default {
         <div class="card" v-for="(movie,index) in store.movies" key="index"> 
           <div>
             <div class="conteiner_img_seriesandmovie">
-              <img :src="`http://image.tmdb.org/t/p/w1920/${Movieimg(movie.backdrop_path)}`" alt="">
+              <img :src="`http://image.tmdb.org/t/p/w1920/${Movieimg(movie.poster_path)}`" alt="">
             </div>
             <h3 >
               {{ movie.title }}
@@ -86,8 +86,4 @@ export default {
 .conteiner_img_api{
   width: 50px;
 }
-
-// .conteiner_img_seriesandmovie{
-//    width: 1920px;
-//  }
 </style>
