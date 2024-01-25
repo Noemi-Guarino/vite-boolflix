@@ -18,6 +18,7 @@
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
+    padding: 30px;
   }
 
   .card{
@@ -33,6 +34,11 @@
     width: 50px;
   }
   
+  h4{
+    color: grey;
+  }
+
+
   // .infomain{
   //   border: 1px solid green;
 

@@ -111,9 +111,6 @@ export default {
             }" style="color: #ffff00;">
             </i> 
           </span>
-          <h5>
-            {{ serie.vote_average }}
-          </h5>
         </div>
       </div>   
     </div>
