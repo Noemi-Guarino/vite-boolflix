@@ -22,9 +22,9 @@
 
   .card{
     border: 1px solid blue;
-    margin: 20px;
     margin-bottom: 20px;
     color: white;
+    width: calc(100% / 4 - 20px);
     // width: 500px;
     // height: 500px;
   }
