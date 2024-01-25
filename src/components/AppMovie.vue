@@ -72,9 +72,14 @@ export default {
               <!-- <img v-if="flagExist(movie.original_language)" :src="changeimgflag(movie.original_language)" alt=""> -->
                <span>{{ movie.original_language }}</span>
             </div>
-            <h5>
-              {{ movie.vote_average }}
-            </h5>
+            <span>
+              <i v-for="n in 5" class="fa-star" 
+              :class="{ 
+              'fa-solid': n <= Math.ceil(movie.vote_average / 2), 
+              'fa-regular': n > Math.ceil(movie.vote_average / 2) 
+              }" style="color: #ffff00;">
+              </i> 
+            </span>
           </div>
         </div>   
       </div>
