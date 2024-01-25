@@ -21,10 +21,9 @@ export default {
 </script>
 
 <template>
-  <div>
+  <div class="bgpage">
     <AppMovie/>
     <AppTv/>
-
   </div>
 </template>
 

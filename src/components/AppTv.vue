@@ -16,7 +16,7 @@ export default {
 
 <template>
   <div>
-    <div class="bgmain">
+  <div class="bgpage">
     <div class="container">
       <div class="maincontent" > 
         <div class="card" v-for="(serie,index) in store.series" key="index"> 

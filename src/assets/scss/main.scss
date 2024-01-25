@@ -3,24 +3,31 @@
 @use "partials/reset.scss" as *;
 
 
-// appmovie e tv
-
-.bgmain{
-    background-color: rgb(26, 26, 26);
-    padding: 20px;
-    color: white;
-  }
+// appmovie e tv{
+  body{
+  background-color: black;
+  height: 100vh;
+  background-image: url("");
+}
 
   .maincontent{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   .card{
     border: 1px solid blue;
+    margin: 20px;
     margin-bottom: 20px;
+
+    color: white;
+    // width: 300px;
+    // height: 300px;
   }
-  .infomain{
-    border: 1px solid red;
-  }
+
+  // .infomain{
+  //   border: 1px solid green;
+
+  // }

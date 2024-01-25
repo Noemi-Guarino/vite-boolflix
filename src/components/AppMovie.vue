@@ -20,9 +20,9 @@ export default {
       // }
     // },
     methods: {
-       flagExist(lang){
-      return this.flags.includes(lang);
-    },
+    //    flagExist(lang){
+    //   return this.flags.includes(lang);
+    // },
     changeimgflag(lang){
       if(lang=='en'){
         return 'GB';
@@ -46,11 +46,14 @@ export default {
 
 <template>
 
-  <div class="bgmain">
+  <div class="bgpage">
     <div class="container">
       <div class="maincontent" > 
         <div class="card" v-for="(movie,index) in store.movies" key="index"> 
           <div>
+            <div>
+              <img :src="`http://image.tmdb.org/t/p/w1920/${movie.backdrop_path}`" alt="">
+            </div>
             <h3 >
               {{ movie.title }}
             </h3>
@@ -59,7 +62,7 @@ export default {
             <h4 >
               {{ movie.original_title }}
             </h4>
-            <div>
+            <div class="conteiner_img_api">
               <img :src="`https://flagsapi.com/${changeimgflag(movie.original_language)}/flat/64.png`">
               <!-- <img v-if="flagExist(movie.original_language)" :src="changeimgflag(movie.original_language)" alt=""> -->
                <span>{{ movie.original_language }}</span>
@@ -75,4 +78,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+.conteiner_img_api{
+  width: 50px;
+}
 </style>
