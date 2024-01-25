@@ -22,12 +22,14 @@
   }
 
   .card{
-    border: 1px solid blue;
+    // border: 2px solid blue;
     margin-bottom: 20px;
     color: white;
     width: calc(100% / 4 - 20px);
-    // width: 500px;
-    // height: 500px;
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(255, 1, 1, 0.283), 0 6px 20px 0 rgba(255, 2, 2, 0.193);
+    // width: 200px;
+    // height: 350px;
   }
 
   .conteiner_img_api{
@@ -38,6 +40,24 @@
     color: grey;
   }
 
+
+ .infomain_card{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.652);
+    width: 100%;
+    backdrop-filter: blur(2px);
+    font-size: 1.2em;
+    display: none;
+  }
+
+  .card:hover .infomain_card{
+    bottom: 0;
+    display: block;
+  }
 
   // .infomain{
   //   border: 1px solid green;

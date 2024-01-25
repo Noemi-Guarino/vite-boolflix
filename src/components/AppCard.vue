@@ -59,11 +59,11 @@ export default {
           <div class="conteiner_img_seriesandmovie">
             <img :src="`http://image.tmdb.org/t/p/${Movieimg(movie.poster_path)}`" alt="">
           </div>
+        </div>   
+        <div class="infomain_card">
           <h2>
             {{ movie.title }}
           </h2>
-        </div>   
-        <div class="infomain_card">
           <h4 >
             {{ movie.original_title }}
           </h4>
@@ -89,11 +89,11 @@ export default {
           <div class="conteiner_img_seriesandmovie">
             <img :src="`http://image.tmdb.org/t/p/w1920/${Movieimg(serie.poster_path)}`" alt="">
           </div>
+        </div>   
+        <div class="infomain_card">
           <h2>
             {{ serie.name }}
           </h2>
-        </div>   
-        <div class="infomain">
           <h4 >
             {{ serie.original_name }}
           </h4>
