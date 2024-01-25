@@ -51,40 +51,70 @@ export default {
 
 <template>
 
-  <div class="bgpage">
-    <div class="container">
-      <div class="maincontent" > 
-        <div class="card" v-for="(movie,index) in store.movies" key="index"> 
-          <div>
-            <div class="conteiner_img_seriesandmovie">
-              <img :src="`http://image.tmdb.org/t/p/w1920/${Movieimg(movie.poster_path)}`" alt="">
-            </div>
-            <h3 >
-              {{ movie.title }}
-            </h3>
-          </div>   
-          <div class="infomain">
-            <h4 >
-              {{ movie.original_title }}
-            </h4>
-            <div class="conteiner_img_api">
-              <img :src="`https://flagsapi.com/${changeimgflag(movie.original_language)}/flat/64.png`">
-              <!-- <img v-if="flagExist(movie.original_language)" :src="changeimgflag(movie.original_language)" alt=""> -->
-               <span>{{ movie.original_language }}</span>
-            </div>
-            <span>
-              <i v-for="n in 5" class="fa-star" 
-              :class="{ 
-              'fa-solid': n <= Math.ceil(movie.vote_average / 2), 
-              'fa-regular': n > Math.ceil(movie.vote_average / 2) 
-              }" style="color: #ffff00;">
-              </i> 
-            </span>
+  <!-- movie -->
+  <div class="container">
+    <div class="maincontent" > 
+      <div class="card" v-for="(movie,index) in store.movies" key="index"> 
+        <div class="top_card">
+          <div class="conteiner_img_seriesandmovie">
+            <img :src="`http://image.tmdb.org/t/p/w1920/${Movieimg(movie.poster_path)}`" alt="">
           </div>
+          <h3 >
+            {{ movie.title }}
+          </h3>
         </div>   
+        <div class="infomain_card">
+          <h4 >
+            {{ movie.original_title }}
+          </h4>
+          <div class="conteiner_img_api">
+            <img :src="`https://flagsapi.com/${changeimgflag(movie.original_language)}/flat/64.png`">
+            <!-- <img v-if="flagExist(movie.original_language)" :src="changeimgflag(movie.original_language)" alt=""> -->
+             <!-- <span>{{ movie.original_language }}</span> -->
+          </div>
+          <span>
+            <i v-for="n in 5" class="fa-star" 
+            :class="{ 
+            'fa-solid': n <= Math.ceil(movie.vote_average / 2), 
+            'fa-regular': n > Math.ceil(movie.vote_average / 2) 
+            }" style="color: #ffff00;">
+            </i> 
+          </span>
+        </div>
       </div>
+      <!-- serietv  -->
+      <div class="card serie" v-for="(serie,index) in store.series" key="index"> 
+        <div>
+          <div class="conteiner_img_seriesandmovie">
+            <img :src="`http://image.tmdb.org/t/p/w1920/${Movieimg(serie.poster_path)}`" alt="">
+          </div>
+          <h3 >
+            {{ serie.name }}
+          </h3>
+        </div>   
+        <div class="infomain">
+          <div class="conteiner_img_api">
+            <img :src="`https://flagsapi.com/${changeimgflag(serie.original_language)}/flat/64.png`">
+            <!-- <img v-if="flagExist(movie.original_language)" :src="changeimgflag(movie.original_language)" alt=""> -->
+             <!-- <span>{{ movie.original_language }}</span> -->
+          </div>
+          <span>
+            <i v-for="n in 5" class="fa-star" 
+            :class="{ 
+            'fa-solid': n <= Math.ceil(serie.vote_average / 2), 
+            'fa-regular': n > Math.ceil(serie.vote_average / 2) 
+            }" style="color: #ffff00;">
+            </i> 
+          </span>
+          <h5>
+            {{ serie.vote_average }}
+          </h5>
+        </div>
+      </div>   
+  
     </div>
   </div>
+
 </template>
 
 <style lang="scss" scoped>
