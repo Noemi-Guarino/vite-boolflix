@@ -48,11 +48,9 @@ export default {
 </script>
 
 <template>
-  <div class="bgpage">
     <AppHeader />
     <AppMain />
     <AppFooter />
-  </div>
 </template>
 
 <style lang="scss">

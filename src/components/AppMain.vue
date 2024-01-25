@@ -1,8 +1,7 @@
 <script>
 import axios from 'axios';
 import { store } from '../store';
-import AppMovie from './AppMovie.vue';
-import AppTv from './AppTv.vue';
+import AppCard from './AppCard.vue';
 
 export default {
     data() {
@@ -14,17 +13,13 @@ export default {
 
     },
     components: {
-        AppMovie,
-        AppTv,
+        AppCard,
     },
 }
 </script>
 
 <template>
-  <div class="bgpage">
-    <AppMovie/>
-    <AppTv/>
-  </div>
+    <AppCard/>
 </template>
 
 <style lang="scss" scoped>

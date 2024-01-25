@@ -57,11 +57,11 @@ export default {
       <div class="card" v-for="(movie,index) in store.movies" key="index"> 
         <div class="top_card">
           <div class="conteiner_img_seriesandmovie">
-            <img :src="`http://image.tmdb.org/t/p/w1920/${Movieimg(movie.poster_path)}`" alt="">
+            <img :src="`http://image.tmdb.org/t/p/${Movieimg(movie.poster_path)}`" alt="">
           </div>
-          <h3 >
+          <h2>
             {{ movie.title }}
-          </h3>
+          </h2>
         </div>   
         <div class="infomain_card">
           <h4 >
@@ -72,6 +72,7 @@ export default {
             <!-- <img v-if="flagExist(movie.original_language)" :src="changeimgflag(movie.original_language)" alt=""> -->
              <!-- <span>{{ movie.original_language }}</span> -->
           </div>
+          <span>Voto</span>
           <span>
             <i v-for="n in 5" class="fa-star" 
             :class="{ 
@@ -88,16 +89,20 @@ export default {
           <div class="conteiner_img_seriesandmovie">
             <img :src="`http://image.tmdb.org/t/p/w1920/${Movieimg(serie.poster_path)}`" alt="">
           </div>
-          <h3 >
+          <h2>
             {{ serie.name }}
-          </h3>
+          </h2>
         </div>   
         <div class="infomain">
+          <h4 >
+            {{ serie.original_name }}
+          </h4>
           <div class="conteiner_img_api">
             <img :src="`https://flagsapi.com/${changeimgflag(serie.original_language)}/flat/64.png`">
             <!-- <img v-if="flagExist(movie.original_language)" :src="changeimgflag(movie.original_language)" alt=""> -->
              <!-- <span>{{ movie.original_language }}</span> -->
           </div>
+          <span>Voto</span>
           <span>
             <i v-for="n in 5" class="fa-star" 
             :class="{ 
@@ -111,14 +116,10 @@ export default {
           </h5>
         </div>
       </div>   
-  
     </div>
   </div>
 
 </template>
 
 <style lang="scss" scoped>
-.conteiner_img_api{
-  width: 50px;
-}
 </style>
