@@ -19,7 +19,8 @@ export default {
              })
              .then((response) => {
                 this.store.movies = response.data.results;
-                console.log("questafilm",this.store.movies);
+                this.store.search = ''
+                console.log("Film:",this.store.movies);
              });
           axios
            .get(this.store.Urlserie,{
@@ -30,7 +31,8 @@ export default {
            })
            .then((response) => {
             this.store.series = response.data.results;
-            console.log("questaserie",this.store.series);
+            this.store.search = ''
+            console.log("Serie:",this.store.series);
            });
         } 
       }
